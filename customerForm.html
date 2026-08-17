@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+         <!-- Customer Form need to fill-in-->
+
+        <div id="customerForm">
+
+            <form>
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+
+                <label for="address">Complete Address:</label>
+                <input type="text" id="address" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" placeholder="Message Here"></textarea>
+
+
+                <button type="button" id="send">Send</button>
+
+            </form>
+
+        </div>
+
+        <!-- The greeting will appear-->
+         <div id="greetingMessage"></div>
+
+        <!--Link to external javascript file-->
+        <script src="customerForm.js"></script>
+    </body>
+    
+</body>
+</html>

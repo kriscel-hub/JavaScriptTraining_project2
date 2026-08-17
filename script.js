@@ -96,75 +96,20 @@ MinimalistWovenBasketBagButton.addEventListener('click', function() {
     }
 })
 
-//__________________________________________________________________________________________________________________
-
-
-
-
-
-const submit = document.getElementById('submit');
-const customerFormContainer = document.getElementById('customerForm');
-const greetingMessage = document.getElementById('greetingMessage'); // lagay ka ng div sa HTML
-
-submit.addEventListener('click', function() {
-    // Gumawa ng bagong form element
-    const form = document.createElement('form');
-
-    form.innerHTML = `
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" placeholder="Anna O. Torres" required>
-
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Anna_Torres@gmail.com" required>
-
-        <label for="message">Message:</label>
-        <textarea name="message" id="message" rows="4" placeholder="Message Here" required></textarea>
-
-        <button type="submit" id="sendButton">Send</button>
-        <button type="reset" id="resetButton">Reset</button>
-    `;
-
-    customerFormContainer.appendChild(form);
-
-    // Validation kapag nag-submit
-    form.addEventListener('submit', function(e) {
-        e.preventDefault(); // para hindi mag-refresh agad
-
-        const nameInput = document.getElementById('name');
-        const name = nameInput.value.trim();
-
-        if (name === '') {
-            greetingMessage.textContent = 'Please enter your name';
-        } else if (!isValidName(name)) {
-            greetingMessage.textContent = 'Invalid input. Please use only letters.';
-        } else {
-            greetingMessage.textContent = `Hello, ${name}! Your order has been submitted.`;
-            alert("Form submitted successfully!");
-
-            // Reset form
-            form.reset();
-
-            // Tanggalin ang form at bumalik sa original state
-            customerFormContainer.innerHTML = '';
-        }
-    });
-});
-
-// Function to check if the input contains only letters
-function isValidName(name) {
-    const namePattern = /^[a-zA-Z\s]+$/;
-    return namePattern.test(name);
-}
-
-
 
 
 //________________________________________________________________________________________________________________________________
 
-//Reset Button
-const resetButton = document.getElementById('reset');
-//Refresh the whole page
-resetButton.addEventListener('click', function () {
+
+//Refresh Button
+const refreshButton = document.getElementById('refresh');
+
+refreshButton.addEventListener('click', function () {
     location.reload();
 });
+
+
+
+
+
 
