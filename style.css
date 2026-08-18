@@ -426,7 +426,8 @@ body {
     text-align: center;
 }
 
-#products-div #reset-submit-div button {
+#products-div #reset-submit-div button, a {
+    text-decoration: none;
     padding: 12px 20px;
     margin: 5px;
     border: none;
@@ -436,12 +437,12 @@ body {
                 background-color 0.3s ease;
 }
 
-#products-div #reset-submit-div #reset {
+#products-div #reset-submit-div #refresh {
     background-color: antiquewhite;
     color: chocolate;
 }
 
-#products-div #reset-submit-div #reset:hover {
+#products-div #reset-submit-div #refresh:hover {
     transform: scale(1.05);
     background-color: chocolate;
     color: white;
@@ -462,8 +463,10 @@ body {
 /* Greeting message */
 
 #greetingMessage {
-    margin: 15px;
+    margin: auto;
+    text-align: center;
     font-weight: bold;
+    color: red;
 }
 
 
